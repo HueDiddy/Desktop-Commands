@@ -1,0 +1,17 @@
+Fix Windows 10 recovery image:
+
+First mount new recovery image
+
+To run Deployment Image Servicing and Management tool with an alternate source (install.wim) image, use these steps:
+
+Open Start.
+Search for Command Prompt, right-click the top result, and select the Run as administrator option.
+Type the following command to repair the Windows 10 image and press Enter: DISM /Online /Cleanup-Image /RestoreHealth /Source:G:\Sources\install.wim
+In the command, replace "G" with the ISO mount point drive letter in File Explorer.
+
+(Optional) Type the following command to limit the use of Windows Update and press Enter: DISM /Online /Cleanup-Image /RestoreHealth /Source:G\Sources\install.wim /LimitAccess
+
+(Optional) Type the following variant of the previous command to accomplish the same task and press Enter: DISM /Online /Cleanup-Image /RestoreHealth /Source:wim:G:\Sources\install.wim:1 /LimitAccess
+In the command, change "G:\Sources," for the path to the "install.wim" file.
+
+Once you complete the steps, the command will scan and repair the problems using the "install.wim" file you specified as the alternative source.
