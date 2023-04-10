@@ -1,0 +1,5 @@
+wmic useraccount
+
+or 
+
+wmic useraccount list full
