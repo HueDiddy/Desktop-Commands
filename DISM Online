@@ -1,0 +1,31 @@
+DISM command with CheckHealth option:
+
+The CheckHealth option with the DISM tool lets you determine any corruptions inside the local Windows 10 image. However, the option does not perform any repairs.
+
+To check the Windows 10 image for issues with DISM, use these steps:
+
+Open Start.
+Search for Command Prompt, right-click the top result, and select the Run as administrator option.
+Type the following command to perform a quick check and press Enter: DISM /Online /Cleanup-Image /CheckHealth
+
+Once you complete the steps, the Deployment Image Servicing and Management tool will run and verify any data corruption that may require fixing.
+
+DISM command with ScanHealth option:
+
+The ScanHealth option does a more advanced scan to determine whether the image has any problems.
+
+To check image problems with the ScanHealth option, use these steps:
+
+Open Start.
+Search for Command Prompt, right-click the top result, and select the Run as administrator option.
+Type the following command to perform an advanced DISM scan and press Enter: DISM /Online /Cleanup-Image /ScanHealth
+
+DISM command with RestoreHealth option:
+
+If there are problems with the system image, use DISM with the RestoreHealth option to scan and repair common issues automatically.
+
+To repair Windows 10 image problems with the DISM command tool, use these steps:
+
+Open Start.
+Search for Command Prompt, right-click the top result, and select the Run as administrator option.
+Type the following command to repair the Windows 10 image and press Enter: DISM /Online /Cleanup-Image /RestoreHealth
