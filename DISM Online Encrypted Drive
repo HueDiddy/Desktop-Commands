@@ -1,0 +1,15 @@
+To use DISM with an "install.esd" image file as the source to repair Windows 10, use these steps:
+
+Type the following command to repair the image with an "install.esd" file and press Enter: DISM /Online /Cleanup-Image /RestoreHealth /Source:C:\ESD\Windows\sources\install.esd
+
+In the command, change "C:\ESD\Windows\sources" with the path to the location of the ".esd" file (if different).
+
+(Optional) Type the following command to limit the use of Windows Update and press Enter: DISM /Online /Cleanup-Image /RestoreHealth /Source:C:\ESD\Windows\sources\install.esd /LimitAccess
+
+(Optional) Type the following variant of the previous command to accomplish the same task and press Enter: DISM /Online /Cleanup-Image /RestoreHealth /Source:esd:C:\ESD\Windows\sources\install.esd:1 /LimitAccess
+
+(Optional) Type the following command to use an install.esd file located in another drive and press Enter: DISM /Online /Cleanup-Image /RestoreHealth /Source:E:\Sources\install.esd
+
+In the command, replace "E:\Sources" with the path to the location of the "install.esd" file.
+
+After you complete the steps, the tool will repair the damaged files using the files included in the "install.esd" image.
