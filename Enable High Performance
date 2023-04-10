@@ -1,1 +1,1 @@
-powercfg /s SCHEME_MIN
+powercfg.exe /s SCHEME_MIN
